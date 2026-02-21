@@ -5,13 +5,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: List files (Debug)
+        run: ls -R
+
       - name: Build with Buildozer
         uses: ArtemSBulgakov/buildozer-action@v1
         with:
           buildozer_version: stable
           command: debug
+          
       - name: Upload APK
         uses: actions/upload-artifact@v2
         with:
-          name: Nova-App
+          name: Nova-Final-APK
           path: bin/*.apk
