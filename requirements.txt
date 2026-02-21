@@ -1,0 +1,5 @@
+python3
+kivy==2.2.1
+pyTelegramBotAPI
+opencv-python
+jnius
